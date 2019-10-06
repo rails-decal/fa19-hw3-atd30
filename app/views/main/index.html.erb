@@ -1,1 +1,5 @@
-<h1> Hello <%= @name.capitalize %> </h1>
+<% if not @w.nil? %>
+    <h1> <%= @w[:city] %> </h1>
+    <body> It's <%= @temperature %>&#8457 and it looks like <%= @w[:description]%> 
+    </body>
+<% end %>
