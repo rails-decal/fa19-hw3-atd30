@@ -1,5 +1,12 @@
 <% if not @w.nil? %>
     <h1> <%= @w[:city] %> </h1>
-    <body> It's <%= @temperature %>&#8457 and it looks like <%= @w[:description]%> 
-    </body>
+    <p> 
+        It's <%= @temperature %>&#8457 
+        and it looks like <%= @w[:description]%> 
+    </p>
+<% end %>
+<%= form_with local: true, method: "get" do |f| %>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+    <%= f.submit %>
 <% end %>
