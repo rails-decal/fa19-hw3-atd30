@@ -1,0 +1,15 @@
+<h1>Cities#view</h1>
+<body>
+    <% if @cities.empty? %>
+    <% end %>
+    <% @cities.each_value do |city| %>
+    <h2> <%= city.name %> </h2>
+    <p> Population <br>
+        <%= city.population %> <br>
+        Landmark <br>
+        <%= city.landmark %> <br>
+        Temperature <br>
+        <%= ((city.weather[:temperature]-273) * 9.0 / 5 + 32).round(2) %>
+    </p>
+    <% end %>
+</body>
